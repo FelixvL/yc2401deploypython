@@ -1,6 +1,9 @@
 from flask import Flask
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
+
 
 @app.route("/")
 def hello_world():
@@ -15,4 +18,4 @@ def tweede():
 
 @app.route("/welkefiets/<hetmerk>")
 def welkefiets(hetmerk):
-    return "<p>Deze fiets "+hetmerk+"</p>"
+    return "<p>Deze fietz "+hetmerk+"</p>"
